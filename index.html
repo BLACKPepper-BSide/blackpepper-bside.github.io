@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-adsense-account" content="ca-pub-5019025090448812">
+  <meta name="description" content="B面の施術ログシリーズ。施術時間や報酬目安の記録から、店舗別の分析まで。アプリの選び方と使い方を紹介します。">
+  <title>B面｜施術ログシリーズの使い方</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, sans-serif;
+      color: #24182e;
+      background: #fbf8f3;
+      line-height: 1.75;
+      --purple: #543482;
+      --quiet: #655a6c;
+      --line: #dad1df;
+      --paper: #fffdf9;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 1rem; }
+    body { margin: 0; overflow-wrap: anywhere; }
+    a { color: var(--purple); text-underline-offset: .22em; }
+    a:hover { color: #301853; }
+    a:focus-visible { outline: 3px solid #8352b2; outline-offset: 4px; }
+    p { margin: .65rem 0 0; }
+    h1, h2, h3 { margin: 0; line-height: 1.35; }
+    .wrap { width: min(100% - 2rem, 70rem); margin-inline: auto; }
+    .header { background: var(--paper); border-bottom: 1px solid var(--line); }
+    .header .wrap, .footer .wrap {
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: .25rem 1rem;
+      padding-block: .65rem;
+    }
+    .brand { color: inherit; font-size: 1.45rem; font-weight: 850; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 0 .95rem; }
+    nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .9rem; }
+    .intro {
+      padding-block: clamp(2.5rem, 8vw, 6rem); background: #f1e8f9;
+      border-bottom: 1px solid var(--line);
+    }
+    .intro .wrap { display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; gap: 2rem; }
+    h1 { font-size: clamp(2.15rem, 5.6vw, 4.5rem); font-weight: 820; letter-spacing: -.035em; }
+    .lead { margin-top: 1.15rem; max-width: 34rem; }
+    .example {
+      margin: 0; background: var(--paper); border: 1px solid #cdbbdd;
+      border-radius: 1rem; padding: clamp(1rem, 3vw, 2rem);
+      box-shadow: .4rem .4rem 0 #e1d2ec;
+    }
+    figcaption { color: var(--purple); font-weight: 750; }
+    .example dl { display: grid; grid-template-columns: 1fr auto; gap: .4rem .8rem; align-items: baseline; margin: .8rem 0 0; }
+    .example dd { margin: 0; font-size: clamp(1rem, 2.3vw, 1.35rem); font-weight: 800; text-align: right; }
+    .section { padding-block: clamp(2.2rem, 6vw, 4.25rem); border-bottom: 1px solid var(--line); }
+    h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+    h3 { font-size: 1.16rem; }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; margin-top: 1.35rem; }
+    .card { display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: .8rem; padding: 1.25rem; }
+    .card p { color: var(--quiet); margin-bottom: .6rem; }
+    .card a { min-height: 44px; display: inline-flex; align-items: center; margin-top: auto; align-self: flex-start; font-weight: 700; }
+    .status { margin-top: auto; color: var(--purple); font-weight: 700; }
+    .guide { max-width: 48rem; }
+    .guide ol { padding-left: 1.5rem; margin: 1rem 0; }
+    .guide li + li { margin-top: .8rem; }
+    details { background: var(--paper); border: 1px solid var(--line); border-radius: .65rem; padding-inline: 1rem; }
+    details + details { margin-top: .6rem; }
+    summary { cursor: pointer; font-weight: 750; padding-block: .65rem; }
+    details p { margin: 0 0 .85rem; }
+    .policy { max-width: 48rem; }
+    .policy h3 { margin-top: 1.35rem; }
+    .footer { background: var(--paper); }
+    @media (max-width: 44rem) {
+      .intro .wrap, .cards { grid-template-columns: 1fr; }
+      .intro .wrap { gap: 1.35rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="#top">B面</a>
+      <nav aria-label="ページ内メニュー">
+        <a href="#apps">アプリ一覧</a>
+        <a href="#guide">使い方</a>
+        <a href="#privacy">プライバシー</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="intro" aria-labelledby="title">
+      <div class="wrap">
+        <div>
+          <h1 id="title">施術ログシリーズ</h1>
+          <p class="lead">施術時間や報酬の目安を、自分で記録するための無料Webアプリです。日々の入力を手早く済ませたい方から、店舗ごとの働き方を振り返りたい方まで、用途に合うアプリを選べます。</p>
+        </div>
+        <figure class="example">
+          <figcaption>1日の入力例（架空の記録）</figcaption>
+          <dl>
+            <dt>店舗</dt><dd>店舗A</dd>
+            <dt>施術</dt><dd>60分＋45分</dd>
+            <dt>合計施術時間</dt><dd>105分</dd>
+          </dl>
+          <p>施術を2件行った日は、1日の合計を105分として記録できます。</p>
+        </figure>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="section" id="apps" aria-labelledby="apps-title">
+        <h2 id="apps-title">用途で選ぶ</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>施術ログ Free</h3>
+            <p>日々の施術時間と月の報酬目安を手早く確認したい方に。店舗を分けて記録でき、勤務時刻も入力できます。</p>
+            <a href="https://blackpepper-bside.github.io/sejutsu-log-free/">施術ログ Freeを開く</a>
+          </article>
+          <article class="card">
+            <h3>施術ログ＠</h3>
+            <p>自分の働き方や店舗ごとの違いを振り返りたい方に。勤務・施術・来店の記録を、曜日や時間帯ごとに分析できます。給与明細と照らし合わせるときは、集計の対象期間も確認してください。</p>
+            <a href="https://blackpepper-bside.github.io/sejutsu-log-at/">施術ログ＠を開く</a>
+          </article>
+          <article class="card">
+            <h3>施術ログ＋Free</h3>
+            <p>さっと記録しつつ、指名や施術の内訳も残したい方に。日ごとの合計から入力でき、カレンダーや振り返り画面で月の動きを確認できます。</p>
+            <a href="https://blackpepper-bside.github.io/sejutsu-log-plus/ads.html">施術ログ＋Freeを開く</a>
+          </article>
+          <article class="card">
+            <h3>施術ログ Fit Free</h3>
+            <p>業務委託で働くセラピスト向けに、勤務先に合わせて使える施術記録アプリを制作しています。</p>
+            <span class="status">制作中</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section guide" id="guide" aria-labelledby="guide-title">
+        <h2 id="guide-title">最初の1件を記録する</h2>
+        <ol>
+          <li><strong>日付と店舗を選ぶ。</strong> 掛け持ち先で記録を分けたい場合は、各アプリの店舗管理で店舗を登録します。</li>
+          <li><strong>施術した時間を入力して保存する。</strong> たとえば60分と45分の2件なら、まとめて105分と入力できます。報酬の目安を見る場合は、単価や控除の設定を確認します。</li>
+          <li><strong>集計画面で期間と店舗を選ぶ。</strong> 月末は施術時間と報酬目安を確認できます。実際の入金額は支払明細で確認してください。</li>
+        </ol>
+        <details>
+          <summary>施術時間と勤務時間はどう使い分ける？</summary>
+          <p>施術時間には施術した分数を入力します。勤務時間も記録したい場合は、勤務の欄に出退勤時刻などを入力します。たとえば8時間の勤務中に5時間施術した場合は、勤務8時間、施術300分です。</p>
+        </details>
+        <details>
+          <summary>機種変更の前に何をすればいい？</summary>
+          <p>使っているアプリの設定またはバックアップ欄で、JSONファイルを保存します。新しい端末で同じアプリを開いて復元し、最近の記録が表示されることを確認してください。</p>
+        </details>
+      </section>
+
+      <section class="section policy" id="privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">プライバシーポリシー</h2>
+        <p>運営者はB面です。このポリシーは本案内ページと、ここで紹介する公開済みの施術ログ Free、施術ログ＠、施術ログ＋Freeに適用します。</p>
+
+        <h3>アプリに入力した記録</h3>
+        <p>日付、店舗、施術時間、報酬設定、メモなどの記録は、利用中のブラウザ内に保存します。記録を運営者のサーバーへ送信する機能はありません。JSONバックアップは利用者が保存・管理するファイルです。ブラウザのサイトデータの削除などにより、端末内の記録が消える場合があります。</p>
+
+        <h3>ホスティング</h3>
+        <p>このサイトとアプリはGitHub Pagesを利用しています。GitHubはセキュリティ上の目的で、訪問者のIPアドレスを記録します。</p>
+        <p><a href="https://docs.github.com/ja/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pagesのデータ収集について</a></p>
+
+        <h3>広告とCookie</h3>
+        <p>現在、B面はGoogle AdSenseによる広告配信を準備しています。配信を開始した対象アプリでは、Googleなどの第三者配信事業者がCookie、ウェブビーコン、IPアドレス、端末・ブラウザに関する情報などを収集し、広告の配信、表示回数の測定、不正防止などに利用する場合があります。同意設定などに応じて、当サイトや他サイトへの訪問情報が広告のパーソナライズに使われる場合があります。</p>
+        <p>同意画面が表示される地域では、画面から同意するかどうかを選べます。パーソナライズド広告はGoogleの広告設定で管理できます。ブラウザの設定からCookieを削除・制限できます。ブラウザのサイトデータをまとめて削除すると、アプリの記録も消える場合があります。</p>
+        <p><a href="https://policies.google.com/technologies/partner-sites?hl=ja">Googleによる情報の使用</a> ・ <a href="https://myadcenter.google.com/">Googleの広告設定</a></p>
+
+        <h3 id="contact">お問い合わせ</h3>
+        <p>施術ログとこの案内ページに関するご連絡は、公開のGitHub Issuesで受け付けます。個人情報や施術記録は投稿しないでください。</p>
+        <p><a id="contact-link" href="https://github.com/BLACKPepper-BSide/sejutsu-log-free/issues">施術ログの問い合わせ先（GitHub）</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© B面</span>
+      <nav aria-label="関連リンク">
+        <a href="#privacy">プライバシーポリシー</a>
+        <a href="https://blackpepper-bside.github.io/bside-shop/">B面ショップ</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
