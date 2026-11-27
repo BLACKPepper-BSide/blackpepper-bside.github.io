@@ -58,7 +58,15 @@
     .card { display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: .8rem; padding: 1.25rem; }
     .card p { color: var(--quiet); margin-bottom: .6rem; }
     .card a { min-height: 44px; display: inline-flex; align-items: center; margin-top: auto; align-self: flex-start; font-weight: 700; }
-    .status { margin-top: auto; color: var(--purple); font-weight: 700; }
+    .maker-note { margin-top: .85rem; max-width: 34rem; color: var(--quiet); font-size: .925rem; }
+    .card-fit { margin-top: 1.35rem; border-color: #cdbbdd; background: #faf6fd; }
+    .card-title { display: flex; gap: .8rem; align-items: center; margin-bottom: .65rem; }
+    .card-title img { display: block; flex: 0 0 48px; border-radius: .65rem; }
+    .card-title > div { min-width: 0; }
+    .card .catchcopy { margin: .2rem 0 0; color: var(--purple); font-weight: 750; }
+    .card .audience { margin: 0 0 .65rem; color: var(--purple); font-size: .875rem; font-weight: 750; }
+    .card .fit-privacy { margin-top: 0; font-size: .875rem; font-weight: 500; }
+    .other-apps-title { margin-top: 1.55rem; }
     .guide { max-width: 48rem; }
     .guide ol { padding-left: 1.5rem; margin: 1rem 0; }
     .guide li + li { margin-top: .8rem; }
@@ -93,6 +101,7 @@
         <div>
           <h1 id="title">施術ログシリーズ</h1>
           <p class="lead">施術時間や報酬の目安を、自分で記録するための無料Webアプリです。日々の入力を手早く済ませたい方から、店舗ごとの働き方を振り返りたい方まで、用途に合うアプリを選べます。</p>
+          <p class="maker-note">現役セラピストが個人で制作した無料アプリです。特定の企業・店舗の公式アプリではありません。</p>
         </div>
         <figure class="example">
           <figcaption>1日の入力例（架空の記録）</figcaption>
@@ -109,30 +118,57 @@
     <div class="wrap">
       <section class="section" id="apps" aria-labelledby="apps-title">
         <h2 id="apps-title">用途で選ぶ</h2>
+        <article class="card card-fit">
+            <p class="audience">幅広い店舗のセラピスト向け</p>
+            <div class="card-title">
+              <img src="/sejutsu-log-fit-free/icon-192.png?v=3" width="48" height="48" alt="">
+              <div>
+                <h3>施術ログ Fit Free</h3>
+                <p class="catchcopy">自分のお店の報酬単価に合わせて記録</p>
+              </div>
+            </div>
+            <p>業務委託で働くセラピスト向けの施術記録アプリです。勤務先ごとに報酬や締め日などを設定できます。</p>
+            <p><strong>使い方の例</strong> 店舗ごとの締め日を設定し、締め期間に合わせて月間の施術記録を振り返れます。</p>
+            <a href="https://blackpepper-bside.github.io/sejutsu-log-fit-free/">施術ログ Fit Freeを開く</a>
+            <a class="fit-privacy" href="/sejutsu-log-fit-free/privacy.html">Fit Free専用プライバシーポリシー</a>
+          </article>
+        <h3 class="other-apps-title">記録・振り返り・分析から選ぶ</h3>
         <div class="cards">
           <article class="card">
-            <h3>施術ログ Free</h3>
+            <div class="card-title">
+              <img src="/sejutsu-log-free/sejutsu-final-192.png" width="48" height="48" alt="">
+              <div>
+                <h3>施術ログ Free</h3>
+                <p class="catchcopy">とにかく簡単に記録したい</p>
+              </div>
+            </div>
             <p>日々の施術時間と月の報酬目安を手早く確認したい方に。店舗を分けて記録でき、勤務時刻も入力できます。</p>
             <p><strong>使い方の例</strong> 入力で店舗を選び、施術105分を保存します。「月間記録」で対象月と店舗を選ぶと、施術時間の合計を確認できます。</p>
             <a href="https://blackpepper-bside.github.io/sejutsu-log-free/">施術ログ Freeを開く</a>
           </article>
           <article class="card">
-            <h3>施術ログ＠</h3>
-            <p>自分の働き方や店舗ごとの違いを振り返りたい方に。勤務・施術・来店の記録を、曜日や時間帯ごとに分析できます。給与明細と照らし合わせるときは、集計の対象期間も確認してください。</p>
-            <p><strong>使い方の例</strong> 「設定 → サンプルデータを追加」を選び、「分析」で曜日別の稼働率を見比べます。確認後は「設定 → 実データに戻る」で切り替えられます。</p>
-            <a href="https://blackpepper-bside.github.io/sejutsu-log-at/">施術ログ＠を開く</a>
-          </article>
-          <article class="card">
-            <h3>施術ログ＋Free</h3>
+            <div class="card-title">
+              <img src="/sejutsu-log-plus/icon-192.png" width="48" height="48" alt="">
+              <div>
+                <h3>施術ログ＋Free</h3>
+                <p class="catchcopy">毎日の頑張りを見返したい</p>
+              </div>
+            </div>
             <p>さっと記録しつつ、指名や施術の内訳も残したい方に。日ごとの合計から入力でき、カレンダーや振り返り画面で月の動きを確認できます。</p>
             <p><strong>使い方の例</strong> 入力で施術60分と個人指名1件を記録して保存します。「月間記録」で日ごとの施術時間と指名の集計を確認できます。</p>
             <a href="https://blackpepper-bside.github.io/sejutsu-log-plus/ads.html">施術ログ＋Freeを開く</a>
           </article>
           <article class="card">
-            <h3>施術ログ Fit Free</h3>
-            <p>業務委託で働くセラピスト向けの施術記録アプリです。勤務先ごとに報酬や締め日などを設定できます。</p>
-            <p><strong>使い方の例</strong> 店舗ごとの締め日を設定し、締め期間に合わせて月間の施術記録を振り返れます。</p>
-            <a href="https://blackpepper-bside.github.io/sejutsu-log-fit-free/">施術ログ Fit Freeを開く</a>
+            <div class="card-title">
+              <img src="/sejutsu-log-at/icon-192.png" width="48" height="48" alt="">
+              <div>
+                <h3>施術ログ＠</h3>
+                <p class="catchcopy">もっと効率よく働きたい</p>
+              </div>
+            </div>
+            <p>自分の働き方や店舗ごとの違いを振り返りたい方に。勤務・施術・来店の記録を、曜日や時間帯ごとに分析できます。給与明細と照らし合わせるときは、集計の対象期間も確認してください。</p>
+            <p><strong>使い方の例</strong> 「設定 → サンプルデータを追加」を選び、「分析」で曜日別の稼働率を見比べます。確認後は「設定 → 実データに戻る」で切り替えられます。</p>
+            <a href="https://blackpepper-bside.github.io/sejutsu-log-at/">施術ログ＠を開く</a>
           </article>
         </div>
       </section>
